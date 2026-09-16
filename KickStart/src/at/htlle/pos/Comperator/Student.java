@@ -11,8 +11,9 @@ public class Student {
         if(id < 0) throw new IllegalArgumentException("Passed argument id  must be over null");
         this.id = id;
 
-        this.name = Objects.requireNonNull(name, " Passed argument must not be null");
-
+        if( Objects.requireNonNull(name, " Passed argument must not be null").isBlank());
+        throw new IllegalArgumentException("Passed argument name must not be empty or blank")
+        this.name = name;
         this.classroom = classroom;
 
 
