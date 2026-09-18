@@ -34,6 +34,18 @@ void main(){
 
     }
 
+    System.out.println("First"+"SECOND");
+
+    String aStr = "First";
+    String bstr = "Second";
+
+    System.out.println(aStr+bstr);
+    // using a Stringbuilder for many String concat aperations!!!
+    StringBuilder sb = new StringBuilder();
+    sb.append(aStr).append(",").append(" ").append(bStr);
+    System.out.println(sb);
+
+
 
 
         }
